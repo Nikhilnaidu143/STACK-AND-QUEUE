@@ -11,6 +11,11 @@ public class Queue {
 		linkedList.addLast(data);
 	}
 
+	/** adding dequeue method. **/
+	public void dequeue() {
+		linkedList.removeFirst();
+	}
+
 	/** Printing queue method. **/
 	public void printQueue() {
 		System.out.println("\n" + linkedList.toString());
@@ -25,6 +30,8 @@ public class Queue {
 		queue.enqueue(56); // adding 56 first
 		queue.enqueue(30); // adding 30 second
 		queue.enqueue(70); // adding 70 last
+		queue.printQueue();
+		queue.dequeue(); // Since queue is follows FIFO . so first element will be deleted first.
 		queue.printQueue();
 	}
 }
